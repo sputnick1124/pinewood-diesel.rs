@@ -32,7 +32,7 @@ fn main() {
         .expect("ID not found");
     println!("Deleting {}) {}", participant.id, participant.name);
 
-    let deleted = diesel::delete(participants.find(selection))
+    let _deleted = diesel::delete(participants.find(selection))
         .execute(&connection)
         .expect("Unable to delete participant");
 }

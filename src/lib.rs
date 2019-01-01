@@ -25,7 +25,7 @@ pub fn create_participant<'a>(
     car_name: &'a str,
     car_weight: f64,
 ) -> Participant {
-    use schema::participants;
+    use crate::schema::participants;
 
     let new_participant = NewParticipant {
         name: name,

@@ -24,5 +24,5 @@ fn main() {
         car_weight = w;
     }
 
-    let participant = create_participant(&connection, name, car_name, car_weight);
+    let _participant = create_participant(&connection, name, car_name, car_weight);
 }
