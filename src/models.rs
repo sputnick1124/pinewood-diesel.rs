@@ -1,5 +1,3 @@
-//use diesel::types::Float8;
-
 #[derive(Queryable)]
 pub struct Participant {
     pub id: i32,

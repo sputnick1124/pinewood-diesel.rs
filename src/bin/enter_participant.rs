@@ -1,8 +1,8 @@
 extern crate pinewood_diesel;
 extern crate diesel;
 
-use self::pinewood_diesel::*;
-use std::io::{stdin, Read};
+use crate::pinewood_diesel::*;
+use std::io::{stdin};
 
 fn main() {
     let connection = establish_connection();

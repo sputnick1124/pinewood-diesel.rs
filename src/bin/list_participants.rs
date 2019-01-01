@@ -1,16 +1,15 @@
 extern crate pinewood_diesel;
 extern crate diesel;
 
-use self::pinewood_diesel::*;
-use self::models::*;
-use self::diesel::prelude::*;
+use crate::pinewood_diesel::*;
+use crate::models::*;
+use crate::diesel::prelude::*;
 
 fn main() {
     use pinewood_diesel::schema::participants::dsl::*;
 
     let connection = establish_connection();
     let results = participants
-        //.select(name)
         .load::<Participant>(&connection)
         .expect("Error loading participants");
 

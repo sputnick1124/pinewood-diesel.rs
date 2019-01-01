@@ -1,9 +1,9 @@
 extern crate diesel;
 extern crate pinewood_diesel;
 
-use self::diesel::prelude::*;
-use self::models::*;
-use self::pinewood_diesel::*;
+use crate::diesel::prelude::*;
+use crate::models::*;
+use crate::pinewood_diesel::*;
 use std::io::stdin;
 
 fn main() {
@@ -12,7 +12,6 @@ fn main() {
     let connection = establish_connection();
 
     let users = participants
-        //.select(name)
         .load::<Participant>(&connection)
         .expect("Error loading participants");
 
