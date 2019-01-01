@@ -1,8 +1,8 @@
 table! {
     participants (id) {
         id -> Int4,
-        participants_id -> Varchar,
+        name -> Varchar,
         car_name -> Nullable<Varchar>,
-        weight -> Float8,
+        car_weight -> Float8,
     }
 }

@@ -10,11 +10,15 @@ fn main() {
 
     let connection = establish_connection();
     let results = participants
-        .select(participants_id)
-        .load::<String>(&connection)
+        //.select(name)
+        .load::<Participant>(&connection)
         .expect("Error loading participants");
 
     for participant in results {
-        println!("Name: {}", participant);
+        println!("-------------------");
+        println!("Name: {}", participant.name);
+        println!("Car Name: {}", participant.car_name.unwrap_or("No name".into()));
+        println!("Car Weight: {} g", participant.car_weight);
+        println!("");
     }
 }
